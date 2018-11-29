@@ -801,7 +801,7 @@ class Screen(BaseScreen, RealTerminal):
                     o.append(attr_to_escape(a))
                     lasta = a
                 if first or lastcs != cs:
-                    assert cs in [None, "0", "U"], repr(cs)
+                    assert cs in [None, "0", "U", b'0'], repr(cs)
                     if lastcs == "U":
                         o.append( escape.IBMPC_OFF )
 
